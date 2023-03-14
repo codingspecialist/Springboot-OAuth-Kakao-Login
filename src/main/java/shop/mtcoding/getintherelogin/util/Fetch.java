@@ -22,7 +22,7 @@ public class Fetch {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-        headers.add("Authorization", "Bearer "+accessToken);
+        headers.setBearerAuth(accessToken);
 
         HttpEntity<?> httpEntity = new HttpEntity<>(headers);
 

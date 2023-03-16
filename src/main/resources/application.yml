@@ -5,19 +5,7 @@ server:
     encoding:
       charset: utf-8
       force: true
-
 spring:
-  datasource:
-    url: jdbc:h2:mem:test;MODE=MySQL
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-  h2:
-    console:
-      enabled: true
-
-mybatis:
-  mapper-locations:
-    - classpath:mapper/**.xml
-  configuration:
-    map-underscore-to-camel-case: true
+  mustache:
+    servlet:
+      expose-session-attributes: true
